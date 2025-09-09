@@ -19,8 +19,8 @@ export default function PlaylistGrid() {
   if (playlists.length === 0) return <p>Carregando playlists...</p>
 
   return (
-    <div className="container">
-      <div className="row g-4">
+    <div className="container-fluid">
+      <div className="row g-4 justify-content-center">
         {playlists.map((playlist) => (
           <div key={playlist.name} className="col-12 col-sm-6 col-md-3">
             <PlaylistCard playlist={playlist} />
