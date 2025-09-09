@@ -1,69 +1,34 @@
-# React + TypeScript + Vite
+# Pendrive Musics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Contexto / Motivação
+Há algum tempo encontrei um pendrive do meu falecido pai. Esse era o mesmo pendrive que ele costumava colocar no som do carro quando íamos sair. Nele estão diversas músicas que ele gostava — músicas não muito novas kkkkk.  
 
-Currently, two official plugins are available:
+Resolvi, numa tentativa de "eternizar" este pendrive, criar este projeto para reproduzir essas músicas sempre que quiser recordar bons momentos. Assim, mesmo que o pendrive estrague ou as músicas se percam, a ideia dele estará preservada aqui.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Além disso, também porque o reprodutor de músicas do Windows é muito ruim kkkkk.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Tecnologias utilizadas
+- **ReactJS** (TypeScript)
+- **Vite**
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ▶️ Como rodar o projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone o repositório**
+```bash
+   git clone https://github.com/dandinCode/PendriveMusics.git
+  ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Instale as dependências**
+```bash
+  npm install
+  ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Execute o script**
+```bash
+   npm run dev
+  ```
